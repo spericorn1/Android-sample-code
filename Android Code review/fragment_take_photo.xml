@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDefaultBackground">
+
+
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/thumbnailsButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/button_icon_rounded"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_thumbnails" />
+
+
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/background_status"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="27.34 C / 81.21 F"
+            android:textColor="@color/colorButtonText"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/separatorView1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topLayout"
+        android:background="@color/colorButtonBorder" />
+
+    <LinearLayout
+        android:id="@+id/centerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/separatorView2"
+        android:layout_below="@+id/separatorView1"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="12dp">
+
+            <LinearLayout
+                android:id="@+id/topButtonsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/connectSensorButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_connect" />
+
+                <View
+                    android:id="@+id/connectSeparatorView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@+id/bottomLayout"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/colorButtonBorder" />
+
+                <ImageButton
+                    android:id="@+id/savePhotoButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_save" />
+
+                <ImageButton
+                    android:id="@+id/cameraButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_camera" />
+
+                <ImageButton
+                    android:id="@+id/clearPhotoButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_clear" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bottomButtonsLayout"
+                android:layout_below="@+id/topButtonsLayout">
+
+                <ImageView
+                    android:id="@+id/logoImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/newline_builders_logo_flat_gray_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomButtonsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/duplicateDotsButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_copy" />
+
+                <ImageButton
+                    android:id="@+id/toggleTextModeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_toggle_text" />
+
+                <ImageButton
+                    android:id="@+id/deleteDotsButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_delete" />
+
+                <ImageButton
+                    android:id="@+id/clearDotsButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_clear" />
+
+                <ImageButton
+                    android:id="@+id/editModeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_edit" />
+
+                <ImageButton
+                    android:id="@+id/recordModeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_icon_rounded"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_record" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/dotLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/buttonsLayout"
+            android:background="@drawable/background_status"
+            android:padding="4dp">
+
+            <com.tempphoto.ui.view.DotLayout
+                android:id="@+id/dotLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/takePhotoButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/dotLayout"
+                android:layout_alignLeft="@+id/dotLayout"
+                android:layout_alignRight="@+id/dotLayout"
+                android:layout_alignTop="@+id/dotLayout"
+                android:background="@drawable/button_take_photo_background"
+                android:text="Take Photo"
+                android:textAllCaps="true"
+                android:textColor="@color/colorButtonText"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/photoInfoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/idTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/birthDateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text=""
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text=""
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separatorView2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomLayout"
+        android:background="@color/colorButtonBorder" />
+
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBoxBackground"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/overlayButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBoxBackground"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/overlayButtonsGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/overlayButton1"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+                    android:text="A" />
+
+                <RadioButton
+                    android:id="@+id/overlayButton2"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+                    android:text="B" />
+
+                <RadioButton
+                    android:id="@+id/overlayButton3"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+                    android:text="C" />
+
+                <RadioButton
+                    android:id="@+id/overlayButton4"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+                    android:text="D" />
+
+                <RadioButton
+                    android:id="@+id/overlayButton5"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+                    android:text="E" />
+
+                <RadioButton
+                    android:id="@+id/overlayButton6"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+
+                    android:text="F" />
+
+                <RadioButton
+                    android:id="@+id/overlayButton7"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+
+                    android:text="G" />
+
+                <RadioButton
+                    android:id="@+id/overlayButton8"
+                    style="@style/OverlayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                    android:layout_marginRight="@dimen/overlay_indicator_padding"
+
+                    android:text="H" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/overlayIndicatorsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorBoxBackground"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/overlayIndicator1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorAccent"/>
+            <View
+                android:id="@+id/overlayIndicator2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorAccent"/>
+            <View
+                android:id="@+id/overlayIndicator3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorButtonBackgroundCheckedDark"/>
+            <View
+                android:id="@+id/overlayIndicator4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorButtonBackgroundCheckedDark"/>
+            <View
+                android:id="@+id/overlayIndicator5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorButtonBackgroundCheckedDark"/>
+            <View
+                android:id="@+id/overlayIndicator6"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorButtonBackgroundCheckedDark"/>
+            <View
+                android:id="@+id/overlayIndicator7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorButtonBackgroundCheckedDark"/>
+            <View
+                android:id="@+id/overlayIndicator8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/overlay_indicator_height"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/overlay_indicator_padding"
+                android:layout_marginRight="@dimen/overlay_indicator_padding"
+                android:background="@color/colorButtonBackgroundCheckedDark"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/addNotesLayout"
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTextViewBackground"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/notesEditText"
+            android:layout_width="match_parent"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:minLines="1"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/addNotesButton"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/addNotesButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_alignBottom="@+id/notesEditText"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_icon_rounded"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add_note" />
+
+    </RelativeLayout>
+</RelativeLayout>
